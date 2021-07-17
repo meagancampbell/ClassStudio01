@@ -57,7 +57,19 @@ console.log(gladGator.status());
 
 // //Add methods for adding scores, averaging scores and determining candidate status as described in the studio activity.
 
+let testsToReserve = 0;
+let testsToAccepted = 0;
 
+while (this.average() !== 'Accepted'){
+    if (this.average() === 'Probationary') {
+      
+    testsToReserve += 1;
+  }
+    testsToAccepted += 1;
+    
+}
 
+console.log("Tests till Reserve : " + gladGator.status(testsToReserve));
+console.log("Tests till Accepted : " + testsToAccepted);
 
 //Part 4 - Use the methods to boost Glad Gator’s status to Reserve or higher. How many tests will it take to reach Reserve status? How many to reach Accepted? Remember, scores cannot exceed 100%.
