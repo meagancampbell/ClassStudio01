@@ -5,11 +5,10 @@ class CrewCandidate {
     this.mass = mass;
     this.scores = scores;
   };
-  
     addScore(score) {
     this.scores.push(score);
     };
-  
+
     average(){
     let total = 0;
       
@@ -48,28 +47,37 @@ let bubbaBear = new CrewCandidate('Bubba Bear', '135 kg', [88, 85, 90]);
 let merryMaltese = new CrewCandidate('Merry Maltese', '1.5 kg', [93, 88, 97]);
 let gladGator = new CrewCandidate('Glad Gator', '225 kg', [75, 78, 62]);
 
-console.log(bubbaBear);
-bubbaBear.addScore(83);
-console.log(bubbaBear.scores);
 console.log(bubbaBear.status());
 console.log(merryMaltese.status());
 console.log(gladGator.status());
 
-// //Add methods for adding scores, averaging scores and determining candidate status as described in the studio activity.
+  //Add methods for adding scores, averaging scores and determining candidate status as described in the studio activity.
 
-let testsToReserve = 0;
-let testsToAccepted = 0;
+  // gladGator.addScore(83);
+  // gladGator.addScore(99);
 
-while (this.average() !== 'Accepted'){
-    if (this.average() === 'Probationary') {
-      
-    testsToReserve += 1;
-  }
-    testsToAccepted += 1;
-    
-}
+  // let retestToAccepted = 0;
+  // let retestToReserve = 0;
 
-console.log("Tests till Reserve : " + gladGator.status(testsToReserve));
-console.log("Tests till Accepted : " + testsToAccepted);
+  // while (this.average() < 90){
+  //   this.addScore(95);
+  //   retestToAccepted +=1;
+  //   console.log(`${this.name} earned an average test score of ${gladGator.average()}% and has a status of ${this.status()}`);
+  // }
+
+  // while (this.average() < 90){
+  //   this.addScore(85);
+  //   retestToReserve +=1;
+  //   console.log(`${this.name} earned an average test score of ${this.average()}% and has a status of ${this.status()}`);  
+  // }
+
+
+  // console.log(gladGator.testsToAccepted());
+
+
+
+  // console.log("Tests till Reserve : " + testsToReserve);
+  // console.log("Tests till Accepted : " + retestToAccepted);
+
 
 //Part 4 - Use the methods to boost Glad Gator’s status to Reserve or higher. How many tests will it take to reach Reserve status? How many to reach Accepted? Remember, scores cannot exceed 100%.
